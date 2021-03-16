@@ -1,0 +1,36 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Environment & Health Data Portal"
+enableRobotsTXT = true
+metaDataFormat = "yaml"
+theme = "dohmh"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "01"
+    name = "Portal Home"
+    pre = "<span class='text-primary'><i class='fa fa-home' aria-hidden='true'></i></span>"
+    url = "/"
+    weight = -110
+
+  [[menu.main]]
+    identifier = "02"
+    name = "Data Stories"
+    pre = "<span class='text-primary'><i class='fas fa-passport' aria-hidden='true'></i></span>"
+    url = "http://a816-dohbesp.nyc.gov/IndicatorPublic/Infographic.aspx"
+    weight = -100
+  
+  [[menu.main]]
+    identifier = "03"
+    name = "Data Explorer"
+    pre = "<span class='text-primary'><i class='fas fa-chart-line' aria-hidden='true'></i></span>"
+    url = "http://a816-dohbesp.nyc.gov/IndicatorPublic/Subtopic.aspx"
+    weight = -90
+  
+  [[menu.main]]
+    identifier = "04"
+    name = "Neighborhood Reports"
+    pre = "<span class='text-primary'><i class='fas fa-map-marked-alt' aria-hidden='true'></i></span>"
+    url = "/neighborhood_reports/"
+    weight = -80
