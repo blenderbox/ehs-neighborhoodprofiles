@@ -68,7 +68,8 @@
 
                             <p class="text-white">
                                 <span class="site-title">Environment and Health Data Portal</span>
-                                <span class="site-subtitle">Explore data on how environments shape health in New York City</span>
+                                <span class="site-subtitle">Explore data on how environments shape health in New York
+                                    City</span>
                             </p>
 
 
@@ -88,7 +89,7 @@
                                 <button class="no-btn-style" type="button" data-toggle="collapse"
                                     data-target="#nav-primary" aria-controls="nav-primary" aria-expanded="false"
                                     aria-label="Toggle navigation">
-                                    <span class="fas fa-bars fa-lg" ></span>
+                                    <span class="fas fa-bars fa-lg"></span>
                                 </button>
 
                             </div>
@@ -98,11 +99,11 @@
 
                                 <ul class="extensible-list horizontal">
                                     <li>
-                                        <button class="no-btn-style" type="button" title="Language" data-toggle="collapse"
-                                            data-target="#global-language" aria-controls="global-language"
-                                            aria-expanded="false">
+                                        <button class="no-btn-style" type="button" title="Language"
+                                            data-toggle="collapse" data-target="#global-language"
+                                            aria-controls="global-language" aria-expanded="false">
                                             <span class="sr-only">Language</span>
-                                            <span class="fas fa-language fa-2x" ></span>
+                                            <span class="fas fa-language fa-2x"></span>
                                         </button>
                                     </li>
                                     <li>
@@ -110,7 +111,7 @@
                                             data-target="#global-search" aria-controls="global-search"
                                             aria-expanded="false">
                                             <span class="sr-only">Search</span>
-                                            <span class="fas fa-search fa-lg" ></span>
+                                            <span class="fas fa-search fa-lg"></span>
                                         </button>
                                     </li>
                                 </ul>
@@ -147,7 +148,7 @@
                     <div class="input-group-btn">
                         <button class="btn btn-primary btn-lg" type="button" title="Search">
                             <span class="sr-only">Search</span>
-                            <span class="fas fa-arrow-right" ></span>
+                            <span class="fas fa-arrow-right"></span>
                         </button>
                     </div>
                 </div>
@@ -161,7 +162,7 @@
             <nav class="nav nav-pills border-bottom" role="navigation">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <div class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+                <div class="nav-item{{ if $currentPage.IsMenuCurrent " main" . }} active{{ end }}">
 
                     <a class="nav-link" href="{{ .URL }}" id="nav-item-{{ .Identifier }}">
                         {{ .Pre }} {{ .Name }}
@@ -170,7 +171,7 @@
                 </div>
                 <!-- .nav-item -->
                 {{ end }}
-                
+
             </nav>
 
         </div>
