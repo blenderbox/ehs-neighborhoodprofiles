@@ -57,9 +57,22 @@
                     health topics.
                   </p>
 
-                  <form>
-                    <label for="">Get data for your neighborhood:</label>
-                    <input type="text" id="" name="" style="width:100%;">
+                  <form action="/neighborhood_reports" method="get" class="autocomplete-form">
+                    <div class="row no-gutters mb-2">
+                      <label for="last-neighborhood" class="block col-sm-12 font-weight-bold h4 mb-1 fs-sm">Choose a
+                        neighborhood:</label>
+                      <div class="col-8">
+                        <div class="autocomplete-wrapper">
+                          <select name="last-neighborhood" id="last-neighborhood">
+                            <option value="">Select a neighborhood</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <button type="submit" class="btn-primary btn btn-block">Get Report</button>
+                      </div>
+                    </div>
                   </form>
 
                   <hr>
@@ -165,6 +178,8 @@
           <!-- .accordion-group -->
         </div>
 
+
+        <!--RIGHT HAND CARDS-->
         <div class="col-md-4 col-sm-12">
           <div class="card bg-lightgray mt-4">
             <div class="card-body">
@@ -204,6 +219,8 @@
         </div>
       </div>
 
+
+      <!--BOTTOM CARDS-->
       <div class="row mb-4">
         <div class="col-md-6 col-sm-12 mb-2">
 

@@ -1,6 +1,6 @@
 ---
-title: "Title of Data Story placeholder 1"
-date: 2021-04-13T12:44:43-04:00
+title: "Testing rawhtml shortcode insertion"
+date: 2021-04-14T11:19:55-04:00
 draft: false
 resource1: "Resource text"
 link1: "www.google.com"

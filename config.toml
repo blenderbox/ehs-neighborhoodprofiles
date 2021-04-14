@@ -18,7 +18,7 @@ theme = "dohmh"
     identifier = "02"
     name = "Data Stories"
     pre = "<span class='text-primary'><i class='fas fa-passport' aria-hidden='true'></i></span>"
-    url = "http://a816-dohbesp.nyc.gov/IndicatorPublic/Infographic.aspx"
+    url = "/data_stories/"
     weight = -100
   
   [[menu.main]]
@@ -38,6 +38,6 @@ theme = "dohmh"
   [[menu.main]]
     identifier = "05"
     name = "Key Topics"
-        pre = "<span class='text-primary'><i class='fas fa-star' aria-hidden='true'></i></span>"
+    pre = "<span class='text-primary'><i class='fas fa-star' aria-hidden='true'></i></span>"
     url = ""
     weight = -70
