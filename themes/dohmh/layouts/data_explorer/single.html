@@ -1,24 +1,44 @@
 {{ define "main" }}
 
 
-<article class="container" id="skip-header-target">
-
-    <nav aria-label="breadcrumb" class="mt-2">
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="/data_explorer/">Data Explorer</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-            </ou>
-    </nav>
+<article class="container-fluid" id="skip-header-target">
 
 
+    <div class="col-md-10 col-sm-12 mx-auto my-4">
 
-    <div class="col-md-10 mx-auto my-4">
-        <h2><span class="text-muted"><i class="fas fa-chart-line" aria-hidden="true"
-                    style="margin-right: 10px"></i>Explore data:</span>
-            {{ .Title }}</h2>
+        <div class="row no-gutters mb-2">
+            <div class="col">
+                <nav aria-label="breadcrumb" class="my-3">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/data_explorer/">Data Explorer</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+                        </ou>
+                </nav>
+                <h2><span class="text-muted"><i class="fas fa-chart-line" aria-hidden="true"
+                            style="margin-right: 10px"></i>Explore
+                        data:</span>
+                    {{ .Title }}</h2>
+            </div>
+        </div>
 
-        {{ .Content}}
+        <div class="row no-gutters mt-3">
+            <div class="col-md-7 fs-sm">
+                INFO ICON: About.
+                {{ .Content }}
+
+            </div>
+
+            <div class="col-md-5">
+                DATA ICON: Indicators
+                <hr>
+                STORY ICON: Data stories
+            </div>
+        </div>
+
+
+
+
 
 
     </div>
