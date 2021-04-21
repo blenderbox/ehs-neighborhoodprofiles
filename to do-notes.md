@@ -34,3 +34,11 @@ PUBLISH:
 
 LAYOUT NOTES:
 Right now, DE is using container-fluid and col-md-8 / col-sm-12 ... KT and others are using container and col-md-10 col-sm-12 ... figure out what's best and try to make it consistent. 
+
+
+NOTES:
+- Search work is to use Lunar.js to index markdown documents. This creates json 'database' of all markdown headers. Search term looks at this database and returns results on this basis. Database will have hierarchy; categorized results. ?? Similar terms ??
+- 
+
+
+LIST FUNCTIONS WE WANT TO ACCOMPLISH AROUND TAGGING, linking, indicators, etc. 
