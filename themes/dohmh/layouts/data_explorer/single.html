@@ -15,25 +15,31 @@
                         <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
                         </ou>
                 </nav>
-                <h2><span class="text-muted"><i class="fas fa-chart-line" aria-hidden="true"
-                            style="margin-right: 10px"></i>Explore
-                        data:</span>
-                    {{ .Title }}</h2>
             </div>
         </div>
 
-        <div class="row no-gutters mt-3">
-            <div class="col-md-7 fs-sm">
-                INFO ICON: About.
+        <div class="row mt-3">
+
+            <div class="col-md-4">
+                <h4><i class="fas fa-chart-line text-muted" aria-hidden="true"
+                    style="margin-right: 10px"></i>Get data:</h4>
+                {{ range .Params.indicators}}
+                    <a href="{{.url}}" onclick="protoPopup()">{{.name}}</a>
+                    <hr>
+                {{end}}
+
+
+                <h4 style="margin-top:20px"><i class="fas fa-passport text-muted" aria-hidden="true" style="margin-right: 10px"></i>Data Stories</h4><br>
+            </div>
+
+
+            <div class="col-md-8 fs-sm">
+              <h4><i class="fas fa-info-circle text-muted" style="margin-right: 10px" aria-hidden="true"></i>About {{ .Title}}</h4>
                 {{ .Content }}
 
             </div>
 
-            <div class="col-md-5">
-                DATA ICON: Indicators
-                <hr>
-                STORY ICON: Data stories
-            </div>
+
         </div>
 
 
@@ -46,7 +52,12 @@
 </article>
 
 
+<script>
+    function protoPopup() {
+        alert("This link is taking you to a dataset displayed on a different version of the EH Data Portal. To return to the prototype, just hit the back button.");
+    }
 
+</script>
 
 
 {{end}}
