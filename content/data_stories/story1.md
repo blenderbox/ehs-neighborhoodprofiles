@@ -8,7 +8,7 @@ resource2: "Resource two"
 link2: "www.google.com"
 resource3: "Resource three"
 link3: "www.google.com"
-keywords: [asthma, housing, violence, datastory]
+categories: ["airquality"]
 ---
 
 
