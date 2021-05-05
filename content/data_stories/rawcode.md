@@ -1,13 +1,9 @@
 ---
-title: "Title of Data Story placeholder 1"
-date: 2021-04-13T12:44:43-04:00
-draft: false
-resource1: "Resource text"
-link1: "www.google.com"
-resource2: "Resource two"
-link2: "www.google.com"
-resource3: "Resource three"
-link3: "www.google.com"
+title: "Testing rawhtml shortcode insertion"
+date: 2021-04-14T11:19:55-04:00
+draft: true
+tags: 
+keywords: [asthma, housing, violence, datastory]
 categories: ["airquality"]
 ---
 
