@@ -2,21 +2,26 @@
 title: "Air quality"
 date: 2021-04-14T13:03:17-04:00
 draft: false
-indicators: {
-    "Indicator1": {
+tags:
+categories: ["airquality","childhealth","transportation"]
+keywords: 
+indicators: [
+        {
         "name" : "Air quality advisory days",
         "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=92,719b87,122,Summarize"
     },
 
-    "Indicator2": {
+    {
         "name" : "Fine particles",
         "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=57,719b87,122,Summarize"
     },
-    "Indicator3": {
+    {
         "name" : "Ozone",
         "URL" : "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=55,719b87,122,Summarize"
     }
-}
+]
+
+
 ---
 
 Air quality is a measure of the condition of the air around us. The less air pollution there is, the better the air quality.

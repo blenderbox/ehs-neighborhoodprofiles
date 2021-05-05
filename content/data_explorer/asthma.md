@@ -2,17 +2,20 @@
 title: "Asthma"
 date: 2021-04-14T13:38:16-04:00
 draft: false
-indicators: {
-    "Indicator1": {
+tags:
+categories: ["housing","airquality","childhealth","social"]
+keywords: 
+indicators: [
+    {
         "name" : "ED visits (adults)",
         "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=2380,4466a0,11,Summarize"
     },
 
-    "Indicator2": {
+    {
         "name" : "ED visits (age 0-4)",
         "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=2048,4466a0,11,Summarize"
     }
-}
+]
 ---
 
 Asthma is a common disease in which the lungs become swollen, making breathing difficult. Symptoms include wheezing, coughing, shortness of breath and tightness in the chest. The exact causes of asthma are not known. Asthma cannot be cured, but it can be controlled.
