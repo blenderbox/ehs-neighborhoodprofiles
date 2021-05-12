@@ -32,12 +32,10 @@
             <p>Ranging through data stories:</p>
             <hr>
             <ul>
-            {{ range where .Site.Pages "Section" "data_stories" }}
+            {{ range where .Site.RegularPages "Section" "data_stories" }}
                     <li><a href="{{ .URL}}">{{ .Title }}</a></li>
-            {{ end}}
-    
-        </ul>
-    
+            {{ end}}    
+            </ul>
     
         </div>
 
@@ -45,7 +43,7 @@
         <div class="col-md-3 mr-auto text-right">
             <h4>Other Key Topics</h4>
             <hr>
-            {{ range where .Site.Pages "Section" "key_topics" }}
+            {{ range where .Site.RegularPages "Section" "key_topics" }}
            <p class="my-2"><a href="{{ .URL}}">{{ .Title }}</a></p>
             {{ end}}
             

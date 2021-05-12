@@ -32,7 +32,7 @@ indicators: {
 This code works on any template page to range through items in another content section. For example, placed on key_topics/section.html, it ranges through all of the Site's Pages that are in the data_stories section, and prints the Title.
 
 ```
-{{ range where .Site.Pages "Section" "data_stories" }}
+{{ range where .Site.RegularPages "Section" "data_stories" }}
     {{ .Title }}<br>
 {{end}}
 ```
