@@ -125,13 +125,13 @@ module.exports = function(grunt) {
                 seo_title: frontMatter.seo_title,
                 seo_description: frontMatter.seo_description,
                 seo_image: frontMatter.seo_image,
-                href: href,
+                href: href.replace('content', '').toLowerCase(),
                 content: S(content[2]).trim().stripTags().stripPunctuation().s
             };
 
             return pageIndex;
         };
-console.log(indexPages());
+        console.log(indexPages());
         grunt.file.write("./static/js/lunr/PagesIndex.json", JSON.stringify(indexPages()));
         grunt.log.ok("Index built");
     });
