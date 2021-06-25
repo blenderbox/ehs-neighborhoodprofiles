@@ -189,6 +189,7 @@ function renderResults(results) {
             
             arr.slice(0,10).map(link => {
                 const li = document.createElement('li');
+                li.setAttribute('class', 'pb-3 pb-sm-0')
                 li.append(link);
                 el.querySelector('ol').appendChild(li);
             })
