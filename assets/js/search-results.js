@@ -187,7 +187,7 @@ function renderResults(results) {
             const ol = document.createElement('ol');
             el.append(ol)
             
-            arr.slice(0,10).map(link => {
+            arr.slice(0, 5).map(link => {
                 const li = document.createElement('li');
                 li.setAttribute('class', 'pb-3 pb-sm-0')
                 li.append(link);
@@ -195,7 +195,7 @@ function renderResults(results) {
             })
         }
         
-        if (count > 10) {
+        if (count > 5) {
             const btn = document.createElement("BUTTON");
             btn.innerHTML = "Show more";
             btn.setAttribute('class', 'btn btn-md btn-report');
