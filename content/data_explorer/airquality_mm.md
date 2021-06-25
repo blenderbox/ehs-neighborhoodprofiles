@@ -5,21 +5,7 @@ draft: false
 tags:
 categories: ["airquality","childhealth","transportation"]
 keywords: 
-indicators: [
-        {
-        "name" : "Air quality advisory days",
-        "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=92,719b87,122,Summarize"
-    },
-
-    {
-        "name" : "Fine particles",
-        "URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=57,719b87,122,Summarize"
-    },
-    {
-        "name" : "Ozone",
-        "URL" : "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=55,719b87,122,Summarize"
-    }
-]
+indicators: [{"name" : "Air quality advisory days","URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=92,719b87,122,Summarize"},{"name" : "Fine particles","URL": "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=57,719b87,122,Summarize"},{"name" : "Ozone","URL" : "http://a816-dohbesp.nyc.gov/IndicatorPublic/VisualizationData.aspx?id=55,719b87,122,Summarize"}]
 
 
 ---
