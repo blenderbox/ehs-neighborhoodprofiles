@@ -22,8 +22,11 @@ jobs:
           # extended: true
 
       - name: Build
-        run: grunt lunr-index
-        run: hugo --minify
+        run: | 
+          echo "Build Lunr Search Index"
+          grunt lunr-index
+          echo "Build Hugo"
+          hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
