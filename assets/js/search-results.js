@@ -3,7 +3,6 @@ let lunrIndex,
 $results,
 pagesIndex;
 
-
 // Initialize lunrjs using our generated index file
 function initLunr() {
     var request = new XMLHttpRequest();
@@ -116,7 +115,7 @@ function search(query) {
 */
 function renderResults(results) {
     const $searchResultsTitle = document.querySelector('.search-results-title');
-    const $otherResults = document.getElementById("other_results");
+    const $other = document.getElementById("other");
     const $nieghborhoodReports = document.getElementById("neighborhood_reports");
     const $dataStories = document.getElementById("data_stories");
     const $keyTopics = document.getElementById("key_topics");
@@ -129,8 +128,16 @@ function renderResults(results) {
     let dataExplorerCount = 0;
     let othersCount = 0;
 
+    const nieghborhoodResults = [];
+    const dataStoriesResults = [];
+    const keyTopicsResults = [];
+    const dataExplorerResults = [];
+    const otherResults = [];
+
+    
+
     if (!results.length) {
-        $searchResultsTitle.innerHTML = `We couldn't find any results for '${searchTerm}'`
+        $searchResultsTitle.innerHTML = `We couldn't find any results for '${searchTerm}'`;
         return;
     }
 
@@ -140,49 +147,86 @@ function renderResults(results) {
         ahref.href = result.href;
         ahref.text = result.title;
         li.append(ahref);
-        resultsCount = resultsCount += 1
+        resultsCount = resultsCount += 1;
+        $searchResultsTitle.innerHTML = 
+            `<span class="fas fa-search fa-md"></span> ${resultsCount} results for '${searchTerm}'`;
 
         const section = (str) => {
             if (result.href.includes(str)) {
-                return true
+                return true;
             } else {
-                return false
+                return false;
             }
         }
 
         if (section('neighborhood_reports')) {
-            nieghborhoodReportsCount = nieghborhoodReportsCount += 1;
             ahref.text = result.seo_title;
-            li.append(ahref);
-            $nieghborhoodReports.querySelector('ol').appendChild(li);
+            nieghborhoodResults.push(ahref);
         } else if (section('data_stories')) {
-            dataStoriesCount = dataStoriesCount += 1;
-            $dataStories.querySelector('ol').appendChild(li);
+            dataStoriesResults.push(ahref);
         } else if (section('key_topics')) {
-            keyTopicsCount = keyTopicsCount += 1;
-            $keyTopics.querySelector('ol').appendChild(li);
+            keyTopicsResults.push(ahref);
         } else if (section('data_explorer')) {
-            dataExplorerCount = dataExplorerCount += 1;
-            $dataExplorer.querySelector('ol').appendChild(li);
+            dataExplorerResults.push(ahref);
         } else {
-            othersCount = othersCount += 1;
-            $otherResults.querySelector('ol').appendChild(li);
+            otherResults.push(ahref);
         }
     });
 
-    const displaySection = (count, section) => {
+    const displaySection = (count, el) => {
         if (count > 0) {
-            section.querySelector('.search-results-info').innerHTML = `<strong>${count}</strong> results for <strong>'${searchTerm}'</strong>`
-            section.removeAttribute('hidden')
+            el.querySelector('.search-results-info').innerHTML =
+                `<strong>${count}</strong> results for <strong>'${searchTerm}'</strong>`;
+            el.removeAttribute('hidden');
         }
     }
 
-    $searchResultsTitle.innerHTML = `<span class="fas fa-search fa-md"></span> ${resultsCount} results for '${searchTerm}'`
+    const handleResults = (el, arr, count) => {
+        count = arr.length;
+        if (count > 0) {
+            const ol = document.createElement('ol');
+            el.append(ol)
+            
+            arr.slice(0,10).map(link => {
+                const li = document.createElement('li');
+                li.append(link);
+                el.querySelector('ol').appendChild(li);
+            })
+        }
+        
+        if (count > 10) {
+            const btn = document.createElement("BUTTON");
+            btn.innerHTML = "Show more";
+            btn.setAttribute('class', 'btn btn-md btn-report');
+            el.append(btn);
+            const showMoreResults = () => {
+                arr.slice(10).map(link => {
+                    var li = document.createElement('li');
+                    li.append(link);
+                    el.querySelector('ol').appendChild(li);
+                });
+                removeBtn();
+            }
 
-    displaySection(nieghborhoodReportsCount, $nieghborhoodReports)
-    displaySection(dataStoriesCount, $dataStories)
-    displaySection(keyTopicsCount, $keyTopics)
-    displaySection(dataExplorerCount, $dataExplorer)    
+            btn.addEventListener('click', showMoreResults);
+            const removeBtn = () => {
+                btn.remove();
+                btn.removeEventListener('click', showMoreResults);
+            }
+            
+        }
+
+        displaySection(count, el);
+    }
+
+    handleResults($nieghborhoodReports, nieghborhoodResults, nieghborhoodReportsCount);
+    handleResults($dataStories, dataStoriesResults, dataStoriesCount);
+    handleResults($keyTopics, keyTopicsResults, keyTopicsCount);
+    handleResults($dataExplorer, dataExplorerResults, dataExplorerCount);
+    handleResults($other, otherResults, othersCount);
+
+
+    
 }
 
 // Init
