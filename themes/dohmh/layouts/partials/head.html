@@ -20,6 +20,5 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="/fontawesome/css/all.min.css">
 {{ $sass := resources.Get "scss/theme.scss" }}
-{{ $options := (dict "outputStyle" "compressed" ) }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
