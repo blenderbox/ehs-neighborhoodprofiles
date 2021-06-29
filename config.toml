@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://blenderbox.github.io/ehs-neighborhoodprofiles/"
 languageCode = "en-us"
 title = "Environment & Health Data Portal"
 enableRobotsTXT = true
