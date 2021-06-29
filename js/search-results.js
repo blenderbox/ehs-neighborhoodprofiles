@@ -11,7 +11,6 @@ function initLunr() {
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
             pagesIndex = JSON.parse(request.responseText);
-            console.log("index:", pagesIndex);
 
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
@@ -134,8 +133,6 @@ function renderResults(results) {
     const dataExplorerResults = [];
     const otherResults = [];
 
-    
-
     if (!results.length) {
         $searchResultsTitle.innerHTML = `We couldn't find any results for '${searchTerm}'`;
         return;
@@ -225,8 +222,6 @@ function renderResults(results) {
     handleResults($keyTopics, keyTopicsResults, keyTopicsCount);
     handleResults($dataExplorer, dataExplorerResults, dataExplorerCount);
     handleResults($other, otherResults, othersCount);
-
-
     
 }
 
