@@ -84,7 +84,7 @@ function initUI() {
         renderResults(results);
     } else {
         // redirect to the homepage if there is no search term
-        window.location.href = '/'
+        window.location.href = '/ehs-neighborhoodprofiles/'
     }
 }
 
